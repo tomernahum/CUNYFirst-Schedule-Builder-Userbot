@@ -42,7 +42,7 @@ def register_classes():
 
 
 
-    time.sleep(2)
+    time.sleep(5)
     #load favorite schedule
     favorites_tab = find_element(".link_favorites")
     wait.until(lambda d : favorites_tab.is_displayed())
@@ -90,7 +90,7 @@ def register_classes():
 
 
 
-    time.sleep(5)
+    time.sleep(1)
     driver.quit()
 
     if succeeded:

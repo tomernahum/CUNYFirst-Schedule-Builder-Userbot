@@ -8,12 +8,26 @@ from secrets_and_config import *
 
 from register_classes import register_classes
 
-schedule.every(SECS_TO_WAIT_IN_BETWEEN_RUNS).seconds.do(register_classes)
+
+job_error_count = 0
+def run_job():
+    global job_error_count
+    try:
+        register_classes()
+    except:
+        print("JOB ERRORED ABORTING")
+        job_error_count += 1
+        print(job_error_count)
 
 
 print(f"Program set, will run about every {SECS_TO_WAIT_IN_BETWEEN_RUNS} seconds")
 print("Currently there is no auto-stopping once detected, so you will need to check in periodically on CUNYFIRST and stop the program then")
 print("Leave this program running in the background, stop the program by pressing control + C in the terminal")
+
+time.sleep(5)
+register_classes()
+
+schedule.every(SECS_TO_WAIT_IN_BETWEEN_RUNS).seconds.do(register_classes)
 
 while True:
     schedule.run_pending()
