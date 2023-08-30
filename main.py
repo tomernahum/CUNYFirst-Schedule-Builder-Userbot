@@ -1,7 +1,4 @@
 
-
-
-import schedule
 import time
 
 from secrets_and_config import *
@@ -15,25 +12,31 @@ def run_job():
     try:
         register_classes()
     except:
-        print("JOB ERRORED ABORTING")
         job_error_count += 1
-        print(job_error_count)
+        print(f"JOB ERRORED ABORTING  - {job_error_count} jobs failed so far")
 
 
 print(f"Program set, will run about every {SECS_TO_WAIT_IN_BETWEEN_RUNS} seconds")
 print("Currently there is no auto-stopping once detected, so you will need to check in periodically on CUNYFIRST and stop the program then")
 print("Leave this program running in the background, stop the program by pressing control + C in the terminal")
 
-time.sleep(5)
-register_classes()
-
-schedule.every(SECS_TO_WAIT_IN_BETWEEN_RUNS).seconds.do(register_classes)
-
+times_run = 0
+count = 5
 while True:
-    schedule.run_pending()
-
-    # print(schedule.get_jobs())
     time.sleep(1)
+
+    print(f"\r> {count} seconds till next run. run {times_run} times so far, failed {job_error_count} times   ", end='')
+
+    count -= 1
+    if count <= 0:
+        success = run_job()
+        count = SECS_TO_WAIT_IN_BETWEEN_RUNS
+        times_run += 1
+        if success:
+            print("SEEMS TO HAVE SUCCEEDED")
+            SECS_TO_WAIT_IN_BETWEEN_RUNS = 3600
+            # break
+    
 
 
 """
