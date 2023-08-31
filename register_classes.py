@@ -11,7 +11,7 @@ def register_classes():
 
     driver = webdriver.Chrome()
     # driver.implicitly_wait(10)
-    wait = WebDriverWait(driver, timeout=15)
+    wait = WebDriverWait(driver, timeout=30)
     
     def find_element(css_selector:str):
         return driver.find_element(by=By.CSS_SELECTOR, value=css_selector)

@@ -30,4 +30,10 @@ Use at your own risk
 11) Periodically check cunyfirst yourself to see if you have signed up for the classes and then stop the program (no automatic stopping yet)
 12) Exit the program by pressing control+C on the terminal
 
-I am not responsible if cunyfirst bans your ip or something like that. Use at your own risk
+I am not responsible if cunyfirst bans your ip or something like that. Use at your own risk.
+
+.
+
+please note that the userbot basically breaks if your internet is being really, but it will keep being attempted every interval.
+
+note that I did not reasearch how selenium actually works before writing this, I just tried to get something made quickly, so don't judge me too hard for the quality
