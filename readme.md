@@ -1,6 +1,6 @@
 
 
-# CUNYFirst Schedule Builder Userbot to automatically try register for classes
+# CUNYFirst Schedule Builder Userbot to automatically try to register for classes
 Simple script that uses selenium to automatically use the CUNYFirst Schedule Builder tool on your behalf to try registering for a schedule every 120 seconds so that you get in to any empty seats that arise in that class before anyone else.
 Use at your own risk
 
