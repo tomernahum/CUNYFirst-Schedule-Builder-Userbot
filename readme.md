@@ -6,7 +6,7 @@ Use at your own risk
 
 Usually there are waitlists which make this program not needed (unless you're trying to get on the end of a waitlist), but sometimes they close all the waitlists for some reason, which is what happened when I wrote this.
 
-I didn't want to make this but I had to because it's like nuclear armament - what if the other side already has this them? Same with this tool.
+I didn't want to make this but I had to because it's like nuclear armament - what if the other side already has them? Same with this tool.
 
 # How to Use
 1) Go to cunyfirst schedule builder and select your schedule that you wan't this bot to autoregister for
