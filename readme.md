@@ -4,6 +4,10 @@
 Simple script that uses selenium to automatically use the CUNYFirst Schedule Builder tool on your behalf to try registering for a schedule every 120 seconds so that you get in to any empty seats that arise in that class before anyone else.
 Use at your own risk
 
+Usually there are waitlists which make this program not needed (unless you're trying to get on the end of a waitlist), but sometimes they close all the waitlists for some reason, which is what happened when I wrote this.
+
+I didn't want to make this but I had to because it's like nuclear armament - what if the other side already had them? Same with this tool.
+
 # How to Use
 1) Go to cunyfirst schedule builder and select your schedule that you wan't this bot to autoregister for
 2) Click the "save as favorite" button
@@ -34,6 +38,6 @@ I am not responsible if cunyfirst bans your ip or something like that. Use at yo
 
 .
 
-please note that the userbot basically breaks if your internet is being really, but it will keep being attempted every interval.
+please note that the userbot basically breaks if your internet is being really slow, but it will keep attempting to sign up every interval.
 
-note that I did not reasearch how selenium actually works before writing this, I just tried to get something made quickly, so don't judge me too hard for the quality
+note that I did not reasearch how selenium actually works before writing this, I just tried to get something made quickly, so don't judge me too hard for the quality. It also only works 90% of the time but it runs every X seconds so it evens out
